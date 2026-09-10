@@ -12,6 +12,8 @@ import Landing from "./components/Landing/Landing.jsx";
 import NavBar from "./components/NavBar/NavBar.jsx";
 import SignUpForm from "./components/SignUpForm/SignUpForm.jsx";
 import SignInForm from "./components/SignInForm/SignInForm.jsx";
+import HootDetails from "./components/HootDetails/HootDetails.jsx";
+
 // styles
 import "./App.css";
 
@@ -38,6 +40,7 @@ function App() {
           <>
             {/* Protected routes (available only to signed-in users) */}
             <Route path="/hoots" element={<HootList hoots={hoots} />} />
+            <Route path="/hoots/:id" element={<HootDetails />} />
           </>
         ) : (
           <>
