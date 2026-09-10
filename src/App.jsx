@@ -1,6 +1,8 @@
 import { useState, useContext, useEffect } from "react";
 import { UserContext } from "./contexts/UserContext.jsx";
 import { Routes, Route } from "react-router";
+
+// services
 import * as hootService from "./services/hootService.js";
 
 //components
