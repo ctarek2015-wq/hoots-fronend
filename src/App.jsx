@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router";
 import * as hootService from "./services/hootService.js";
 
 //components
+import HootForm from "./components/HootForm/HootForm.jsx";
 import Dashboard from "./components/Dashboard/Dashboard.jsx";
 import HootList from "./components/HootList/HootList.jsx";
 import Landing from "./components/Landing/Landing.jsx";
@@ -40,6 +41,7 @@ function App() {
           <>
             {/* Protected routes (available only to signed-in users) */}
             <Route path="/hoots" element={<HootList hoots={hoots} />} />
+            <Route path="/hoots/new" element={<HootForm />} />
             <Route path="/hoots/:id" element={<HootDetails />} />
           </>
         ) : (
