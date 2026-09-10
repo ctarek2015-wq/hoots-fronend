@@ -3,7 +3,7 @@ import { useState } from "react";
 const HootForm = ({ handleAddHoot }) => {
   const [formData, setFormData] = useState({
     title: "",
-    text: "",
+    content: "",
     category: "News",
   });
 
@@ -32,9 +32,9 @@ const HootForm = ({ handleAddHoot }) => {
         <textarea
           required
           type="text"
-          name="text"
+          name="content"
           id="text-input"
-          value={formData.text}
+          value={formData.content}
           onChange={handleChange}
         />
         <label htmlFor="category-input">Category</label>
