@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const HootForm = (props) => {
+const HootForm = ({ handleAddHoot }) => {
   const [formData, setFormData] = useState({
     title: "",
     text: "",
@@ -13,8 +13,7 @@ const HootForm = (props) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log("formData", formData);
-    // We'll update this function shortly...
+    handleAddHoot(formData);
   };
 
   return (
